@@ -38,7 +38,6 @@
     });
 
     socket.on('chat message',(msg) => {
-    //alert(msg);
     var item = document.createElement('li');
     item.textContent = msg;
     messages.appendChild(item);
