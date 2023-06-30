@@ -11,8 +11,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 io.on('connection', (socket) => {
-    //io.emit('connection', 'new user connected');\
-    //console.log('a user is connected');
+   
     socket.on('chat message', (msg) => {
         //console.log(msg);\
         socket.emit('chat message', (msg + "11"));
